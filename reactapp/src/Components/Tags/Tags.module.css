@@ -1,0 +1,59 @@
+.tags {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 8px;
+  padding: 5px;
+  font-weight: 700;
+  background: #FFFFFF;
+}
+
+.createTag {
+  display: flex;
+  justify-items: start;
+  border: 2px solid #595959;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.tagName {
+  width: 120px;
+  border: none;
+  outline: none;
+}
+
+.addTag {
+  height: 24px;
+  width: 24px;
+  background: url('../../Assets/icons/newtag.svg') center no-repeat;
+  cursor: pointer;
+}
+
+.addTag:hover {
+  background: url('../../Assets/icons/newtag_hover.svg') center no-repeat;
+}
+
+.tag {
+  display: flex;
+  flex-wrap: nowrap ;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tag::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url('../../Assets/icons/tag.svg') center no-repeat;
+}
+
+.tag:hover:before {
+  background: url('../../Assets/icons/tag_selected.svg') center no-repeat;
+}
+
+.tag:global(.selected)::before {
+  background: url('../../Assets/icons/tag_selected.svg') center no-repeat;
+
+}

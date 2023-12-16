@@ -1,0 +1,39 @@
+.list {
+  min-width: 320px;
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.list:hover {
+  box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px 10px;
+}
+
+.tasks div {
+  word-wrap: break-word;
+}
+
+.newtask {
+  display: flex;
+  border-top: 1px solid #bebebe;
+  border-bottom: 1px solid #bebebe;
+  padding: 5px 10px;
+}
+
+.listOptions {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-content: end;
+  gap: 20px;
+  padding: 5px 10px;
+  height: 2rem;
+  
+  position: relative;
+}

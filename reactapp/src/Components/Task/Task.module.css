@@ -1,0 +1,49 @@
+.taskContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  opacity: 0.6;
+}
+
+.checkbox:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.textarea {
+  flex: 1;
+}
+
+.close {
+  display: flex;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  opacity: 0;
+  z-index: 10;
+  background: url('../../Assets/icons/deleteTask.svg') no-repeat center;
+}
+
+.taskContainer:hover .close {
+  opacity: .6;
+  fill: #C7C7C7;
+}
+
+.close:hover {
+  border-radius: 5px;
+  background-color: #DEDEDE;
+}
+
+@media (max-width: 800px) {
+  .close {
+    opacity: .4;
+  }
+}
+
+
+

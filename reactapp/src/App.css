@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  font-family: 'Roboto';
+  box-sizing: border-box;
+}
+
+body {
+  background: url('./Assets/bgpattern.png');
+}
+
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+textarea {
+  height: 1.6rem;
+  width: 100%;
+  resize: none;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+
+/* CONTAINER LISTAS */
+
+.my-masonry-grid {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 10px; 
+  padding-right: 10px;
+  background-clip: padding-box;
+}
+
+.my-masonry-grid_column > div {
+  margin-bottom: 20px;
+}

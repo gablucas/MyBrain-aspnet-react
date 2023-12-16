@@ -1,0 +1,154 @@
+.tag,
+.pin,
+.color, 
+.duplicate, 
+.delete {
+  opacity: 0;
+  height: 24px;
+  width: 24px;
+  transition: opacity .3s;
+}
+
+/* Esse .list é adicionado no componente List utilizando o css do ListOptions */
+.list:hover .option {
+  opacity: 1;
+}
+
+.tag {
+  background: url('../../../Assets/icons/tag.svg') center no-repeat;
+}
+
+.pin {
+  background: url('../../../Assets/icons/pin.svg') center no-repeat;
+}
+
+.color {
+  background: url('../../../Assets/icons/pallete.svg') center no-repeat;
+}
+
+.duplicate {
+  background: url('../../../Assets/icons/duplicate.svg') center no-repeat;
+}
+
+.delete {
+  background: url('../../../Assets/icons/delete.svg') center no-repeat;
+}
+
+/* Cor de fundo dos icones das opções */
+.option:hover {
+  background-color: #DEDEDE;
+  border-radius: 5px;
+  transition: background-color .3s;
+
+  position: relative;
+}
+
+/* Container da descrição das opções */
+.option:hover::after {
+  display: block;
+  width: max-content;
+  font-size: .8rem;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 5px;
+  color: #F7F7F7;
+  background-color: #2E2E2E;
+  z-index: 1;
+
+  position: absolute;
+  top: 28px;
+  left: -28px; /*Soma do tamanho e padding da imagem*/
+}
+
+/* Descrição das opções */
+.tag:hover::after {
+  content: "Etiqueta";
+}
+
+.pin:hover::after {
+  content: "Fixar";
+}
+
+.color:hover::after {
+  content: "Cor da lista";
+}
+
+.duplicate:hover::after {
+  content: "Duplicar lista";
+}
+
+.delete:hover::after {
+  content: "Deletar lista";
+}
+
+.tags {
+  display: none;  
+  width: 150px;
+  background: #FFFFFF;
+  overflow: hidden;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+
+  position: absolute;
+  top: 36px;
+}
+
+.tags:global(.show) {
+  display: initial;
+}
+
+.tags:hover {
+  display: initial;
+}
+
+.tags button {
+  display: flex;
+  align-items: center;
+  padding: 4px 2px;
+  font-size: .875rem;
+  
+}
+
+.tags button::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url('../../../Assets/icons/checkbox_unchecked.svg') center no-repeat;
+}
+
+.tags button:global(.selected)::before {
+  background: url('../../../Assets/icons/checkbox_checked.svg') center no-repeat;
+}
+
+.colorOptions {
+  display: none;
+  gap: 8px;
+  padding: 4px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  background: #fcfcfc;
+
+  position: absolute; /* Relacionado ao posição da .listOptions no List.module.css */
+  top: 20px;
+  left: 0px;
+}
+
+.colorOptions:global(.show) {
+  display: flex;
+}
+
+.colorOptions li {
+  display: flex;
+}
+
+.colorOptions li:hover svg * {
+  stroke: black;
+  stroke-width: 1;
+}
+
+@media (max-width: 800px) {
+  .option {
+    opacity: .4;
+  }
+}
