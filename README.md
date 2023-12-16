@@ -12,7 +12,7 @@ O projeto possui duas pastas principais (webapi para o backend) e (reactapp para
 - Executar a aplicação
   - dotnet run
 
-## Oracle
+### Oracle
 Para criar as tabelas no banco, importar o arquivo <b>MYBRAIN.sql</b> que se encontra na pasta raiz da aplicação.
 
 ### reactapp
