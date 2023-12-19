@@ -52,3 +52,4 @@ E:\Dev\Github\MyBrain-aspnet-react\webapi\obj\Debug\net8.0\refint\webapi.dll
 E:\Dev\Github\MyBrain-aspnet-react\webapi\obj\Debug\net8.0\webapi.pdb
 E:\Dev\Github\MyBrain-aspnet-react\webapi\obj\Debug\net8.0\webapi.genruntimeconfig.cache
 E:\Dev\Github\MyBrain-aspnet-react\webapi\obj\Debug\net8.0\ref\webapi.dll
+E:\Dev\Github\MyBrain-aspnet-react\webapi\obj\Debug\net8.0\webapi.sourcelink.json

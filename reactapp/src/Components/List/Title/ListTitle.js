@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import useDebounce from '../../../Hooks/useDebounce';
 import useTextarea from '../../../Hooks/useTextarea';
 import styles from './ListTitle.module.css';
-import { putDb } from '../../../Helpers/fetch';
+import { getDb, putDb } from '../../../Helpers/fetch';
+import { TodoContext } from '../../TodoContext';
 
 const ListTitle = ({ todo }) => {
+  const { setTodos } = useContext(TodoContext);
   const [displayValue, setDisplayValue] = React.useState(todo.title || "");
   const textareaRef = React.useRef(null);
   const { resizeTextarea } = useTextarea()
 
-  function handleKeyUp(value) {
+  console.log(todo.title)
+  
+
+  async function handleKeyUp(value) {
     if (value !== todo.title) {
-      putDb(`todos/${todo.todoId}`, { tagId: todo.tagid, color: todo.color, title: value});
+      await putDb(`todos/${todo.todoId}`, { tagId: todo.tagid, color: todo.color, title: value});
+      await getDb("todos", setTodos);
     }
   }
 

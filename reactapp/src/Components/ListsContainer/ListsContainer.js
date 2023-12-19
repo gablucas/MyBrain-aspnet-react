@@ -7,6 +7,7 @@ import List from '../List/Container/List';
 
 const ListsContainer = () => {
   const { todos } = React.useContext(TodoContext);
+  console.log(todos)
 
   const breakpointColumnsObj = {
     default: 5,

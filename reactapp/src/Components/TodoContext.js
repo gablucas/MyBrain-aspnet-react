@@ -12,9 +12,6 @@ const TodoContextProvider = ({ children }) => {
     getDb("tags", setTags);
   }, [endpoint])
 
-  console.log(todos)
-  console.log(endpoint)
-
   return (
     <TodoContext.Provider value={{ todos, setTodos, tags, setTags, endpoint, setEndpoint }}>
       {children}

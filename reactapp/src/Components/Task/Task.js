@@ -21,7 +21,7 @@ const Task = ({ task }) => {
     await getDb(endpoint, setTodos);
   }
 
-  const handleUpdateTaskDebounce = useDebounce(handleUpdateTask, 1000);
+  const handleUpdateTaskDebounce = useDebounce(handleUpdateTask, 500);
 
   function handleKeyDown(e) {
     if(e.key === "Enter") {

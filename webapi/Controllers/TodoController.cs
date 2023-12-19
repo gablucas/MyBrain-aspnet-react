@@ -35,6 +35,8 @@ namespace webapi.Controllers
                 todoQuery += " WHERE TODO.TagId = :tag";
             }
 
+            todoQuery += " ORDER BY TaskId";
+
             var todos = new List<Todo>();
 
             var items = connection.Query<Todo, webapi.Models.Task, Tag, Todo>(todoQuery,
@@ -76,7 +78,7 @@ namespace webapi.Controllers
                 @"UPDATE TODO 
                 SET Title = :Title, 
                     Color = :Color,
-                    TagID = :TagId
+                    TagId = :TagId
                 WHERE todoId = :todoId";
 
             var rowsAffected = connection.Execute(query, new { Title = entity.Title, Color = entity.Color, TagId = entity.TagId, todoId });
